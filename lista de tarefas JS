@@ -1,0 +1,71 @@
+let input = document.getElementById("input")
+let tarefas = document.getElementById("tarefas")
+let arr = []
+
+
+function add() {
+    if (!input.value) {
+        Showmodal()
+    } else {
+        arr.push({
+            tarefa: input.value,
+            feita: false
+        })
+        input.value = ''
+        console.log(arr)
+        ShowTask()
+
+    }
+}
+
+function ShowTask(filtroARR = arr){
+    let lista = ''
+    filtroARR.forEach((item, index) =>{
+        lista += `<li id="lista">
+                    <input type="checkbox" onclick = "concluida(${index})" ${item.feita ? 'checked' : ''}><p>${item.tarefa}</p> <img  onclick = "apagar(${index})"  src="https://cdn-icons-png.flaticon.com/512/3096/3096673.png" alt="lixo" >
+                </li>`
+    })
+
+    tarefas.innerHTML = lista
+}
+
+function concluida(index){
+arr[index].feita = !arr[index].feita
+ShowTask()
+}
+
+function apagar(index){
+    arr.splice(index, 1)
+    ShowTask()
+}
+
+function buscar(){
+    const filtro = document.getElementById('selecao').value
+    let filtroARR = arr
+
+    if(filtro === 'concluidas'){
+        filtroARR = arr.filter(item => item.feita)
+    }else if(filtro === 'pendentes'){
+        filtroARR = arr.filter(item => !item.feita)
+    }
+
+    ShowTask(filtroARR)
+    fecharmodalfiltro()
+}
+
+
+function fecharmodalfiltro(){
+    document.getElementById("ModalFiltro").classList.remove('show')
+}
+
+function Showmodal() {
+    document.getElementById('modal').classList.add('show')
+}
+
+function fecharmodal() {
+    document.getElementById('modal').classList.remove('show')
+}
+
+function filtrar(){
+    document.getElementById('ModalFiltro').classList.add('show')
+}
