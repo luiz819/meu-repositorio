@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista de tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+</head>
+
+<body>
+
+    <div id="ModalFiltro">
+        <div id="filtro">
+            <div id="busca">
+                <select name="" id="selecao">
+                    <option value="todas">Todas</option>
+                    <option value="concluidas">Concluídas</option>
+                    <option value="pendentes">Pendentes</option>
+                </select><button onclick="buscar()">buscar</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="modal">
+        <div id="dentrodomodal">
+            <h1>Campo de entrada vazio!</h1>
+            <h2>adicione suas terefas diarias ou objetivos</h2>
+            <button onclick="fecharmodal()">OK</button>
+        </div>
+    </div>
+
+    <div id="corpo">
+        <h1 style="font-family: roboto;">Lista de Tarefas</h1>
+        <div id="display">
+            <input type="text" id="input" placeholder="adicionar nova tarefa"> <button
+                onclick="add()">adicionar</button> <button id="filtar" onclick="filtrar()">filtar</button>
+        </div>
+        <div>
+            <ul id="tarefas">
+
+            </ul>
+        </div>
+
+
+
+        <script src="index.js"></script>
+    </div>
