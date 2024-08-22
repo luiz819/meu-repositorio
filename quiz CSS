@@ -1,0 +1,150 @@
+body {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#container {
+    background-color: white;
+    height: 500px;
+    width: 50%;
+    border-radius: 20px;
+    
+}
+
+#perguntas {
+    box-shadow: 1px 1px 1px 1px grey;
+    height: 40px;
+    margin: 30px;
+    border-radius: 5px;
+    align-items: center;
+    border: solid white;
+    display: flex;
+}
+
+#task {
+
+    margin: 20px;
+}
+
+#alternativas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#alternativas button {
+    margin: 4px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    width: 540px;
+    box-shadow: 1px 1px grey;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+#next{
+    margin: 30px;
+    display: flex;
+    justify-content: right;
+}
+
+#next button{
+   padding: 13px;
+   width: 100px;
+   border-radius: 5px;
+   border: none;
+   background-color: rgb(0, 162, 255);
+   color: white;
+}
+
+
+#pai-alternativas2{
+display: none;
+}
+
+#alternativas2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#alternativas2 button{
+    margin: 4px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    width: 540px;
+    box-shadow: 1px 1px grey;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+#BUTTONNEXT2{
+    display: none;
+}
+
+#finalizar{
+    display: none;
+}
+
+#pai-alternativas3{
+    display: none;
+}
+
+#alternativas3 button{
+    margin: 4px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    width: 540px;
+    box-shadow: 1px 1px grey;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+#alternativas3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal{
+    background-color: white;
+    height: 500px;
+    width: 50%;
+    border-radius: 20px;
+    display: none;
+}
+
+#dentro-do-modal{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   margin: 100px;
+}
+
+#dentro-do-modal img{
+    height: 100px;
+    width: 100px;
+}
+
+#dentro-do-modal button{
+    margin: 30px;
+    padding: 13px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(0, 162, 255);
+    color: white;
+}
