@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="perguntas">
+            <p id="qts">1 of 3 Questions </p>
+        </div>
+        <div id="task">
+            <p id="Questions">Qual tag HTML é usada para criar um parágrafo?</p>
+        </div>
+        <div id="pia-alternativas">
+            <div id="alternativas">
+                <button class="button" onclick="resposta(this,true)">&lt;p&gt;</button>
+                <button class="button" onclick="resposta(this,false)">&lt;div&gt;<div></button>
+                <button class="button" onclick="resposta(this,false)">&lt;h1&gt;</button>
+                <button class="button" onclick="resposta(this,false)">&lt;span&gt;</button>
+            </div>
+        </div>
+        <div id="pai-alternativas2">
+            <div id="alternativas2">
+                <button class="button" onclick="resposta(this,false)">'color'</button>
+                <button class="button" onclick="resposta(this,true)">' background-color'</button>
+                <button class="button" onclick="resposta(this,false)">'font-size'</button>
+                <button class="button" onclick="resposta(this,false)">'border'</button>
+            </div>
+        </div>
+
+        <div id="pai-alternativas3">
+            <div id="alternativas3">
+                <button class="button" onclick="resposta(this,false)">querySelector()</button>
+                <button class="button" onclick="resposta(this,false)">getElementByClassName()</button>
+                <button class="button" onclick="resposta(this,false)">getElementByTag()</button>
+                <button class="button" onclick="resposta(this,true)">getElementById()</button>
+            </div>
+        </div>
+        <div id="next">
+            <button id="BUTTONNEXT" onclick="next()">next</button>
+            <button id="BUTTONNEXT2" onclick="next2()">next</button>
+            <button id="finalizar" onclick="finalizar()">finalizar</button>
+        </div>
+    </div>
+
+
+    <div id="modal">
+        <div id="dentro-do-modal">
+            <img src="https://cdn-icons-png.flaticon.com/512/6711/6711626.png" alt="verificado">
+        <h1>obrigado por jogar!</h1>
+        <p>Parabéns por completar o meu quiz! Obrigado por jogar!</p>
+        <button onclick="location.reload()">Finalizar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
